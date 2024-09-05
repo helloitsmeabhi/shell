@@ -7,7 +7,9 @@ func main() {
 	//sumavg()
 	//usingrange()
 	//usingshort()
-	checkingvaluesofrange()
+	//checkingvaluesofrange()
+	//usingmake()
+	slicing()
 }
 func array1() {
 	var x [5]int
@@ -66,4 +68,27 @@ func checkingvaluesofrange() {
 		total += value
 	}
 	fmt.Println(total)
+}
+func usingmake() {
+	x := [5]float64{200, 300, 400, 500, 600}
+	y := make([]float64, 5, 10)
+	z := x[1:4]
+	var n int
+	fmt.Println("Enter the array size: ")
+	fmt.Scanf("%d", &n)
+	fmt.Println(x)
+	fmt.Println(y)
+	fmt.Println(z)
+	k := make([]float64, n)
+	fmt.Println(k)
+
+}
+func slicing() {
+	slice1 := []int{100, 200, 300, 400}
+	slice2 := append(slice1, 4, 5)
+	fmt.Println(slice1, slice2)
+	sl1 := []int{100, 300, 400, 500}
+	sl2 := []int{300, 700, 600, 300, 200}
+	sl3 := append(sl1, sl2...)
+	fmt.Println(sl3)
 }
